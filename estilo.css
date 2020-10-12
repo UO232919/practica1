@@ -3,8 +3,16 @@ body {
     line-height: 1.8;
     color: #818181;
 }
+
+header {
+    background-image: url("images/poster.jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    display: inline-block;
+    height: 300px;
+}
 h1 {
-    background-color:#FF5733; 
+    background-color:black; 
     color: #fff;
     text-transform: uppercase;
     padding: 100px 25px;
