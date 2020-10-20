@@ -26,7 +26,6 @@ header {
 }
 
 header + section {
-    font-weight: 0.625em;
     margin: auto;
     padding-top: 0.625em;
     flex: 1 0 auto;
