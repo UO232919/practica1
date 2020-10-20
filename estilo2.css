@@ -6,3 +6,8 @@ body {
     background-color: black;
     text-align: center;
 }
+h1 {
+    text-align: center !important;
+    margin-top: 0em !important; 
+    margin-left: 0em !important;
+}
