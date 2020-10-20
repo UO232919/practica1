@@ -1,24 +1,19 @@
-p + section,section ol{
+section ol{
     column-count: 2;
     text-align: center;
     
 }
-figure{
-    margin-top: 0;
-    text-align: center;
-}
-
 section ol li{
     margin: 1.375em;
     margin-top: 0;
     list-style-type: none;
 }
-ol + p {
+ol + p , figure{
     text-align: center;
 }
 
 @media screen and (max-width : 1050px) {
-    p + section, section ol{
+    section ol{
         column-count: 1;
     }
 }
