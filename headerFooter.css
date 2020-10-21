@@ -1,8 +1,11 @@
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 html,
 body {
     height: 100%;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 body {
     margin: 0;
     background-color: white;
@@ -11,6 +14,7 @@ body {
     flex-direction: column;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 header {
     position: relative;
     background-image: url("images/poster.jpg");
@@ -21,10 +25,12 @@ header {
     z-index:1;
 }
 
+/*a= 1 b= 0 c= 0 <=> Especificidad 100*/
 #poster2 {
     display: none;
 }
 
+/*a= 0 b= 0 c=2 <=> Especificidad 2*/
 header + section {
     margin: auto;
     padding-top: 0.625em;
@@ -32,6 +38,7 @@ header + section {
     width: 70%;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 h1 {
     text-align: left;
     margin-top: 0.4em;
@@ -39,10 +46,14 @@ h1 {
     font-family: waters;
     font-size: 6.25em;
 }
+
+/*a= 0 b= 0 c=2 <=> Especificidad 2*/
 h1 a {
     color: white;
     text-decoration: none;
 }
+
+/*a= 0 b= 0 c=2 <=> Especificidad 2*/
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -50,11 +61,13 @@ nav ul {
     position: absolute;
 }
 
+/*a= 0 b= 0 c=2 <=> Especificidad 2*/
 nav li {
     display: inline-block;
     float: left;
 }
 
+/*a= 0 b= 0 c= 3 <=> Especificidad 3*/
 nav li a {
     display: block;
     min-width: 8.75em;
@@ -66,19 +79,23 @@ nav li a {
     text-decoration: none;
 }
 
+/*a= 0 b= 1 c= 3 <=> Especificidad 13*/
 nav li:hover a {
     background: red;
 }
 
+/*a= 0 b= 2 c= 4 <=> Especificidad 24*/
 nav li:hover ul a:hover {
     background: red;
     color: white;
 }
 
+/*a= 0 b= 0 c= 3 <=> Especificidad 3*/
 nav li ul {
     display: none;
 }
 
+/*a= 0 b= 1 c= 4 <=> Especificidad 14*/
 nav li:hover ul a {
     background: white;
     color: black;
@@ -86,11 +103,14 @@ nav li:hover ul a {
     line-height: 2.5em;
 }
 
+/*a= 0 b= 2 c= 4 <=> Especificidad 24*/
+/*a= 0 b= 2 c= 0 <=> Especificidad 20*/
 nav ul li a:hover+.secundario,
 .secundario:hover {
     display: block;
 }
 
+/*a= 0 b= 1 c= 0 <=> Especificidad 10*/
 .mostrar-menu {
     text-decoration: none;
     color: #fff;
@@ -100,14 +120,17 @@ nav ul li a:hover+.secundario,
     display: none;
 }
 
+/*a= 0 b= 1 c= 2 <=> Especificidad 12*/
 nav input[type=checkbox] {
     display: none;
 }
 
+/*a= 0 b= 3 c= 2 <=> Especificidad 32*/
 nav input[type=checkbox]:checked~.principal {
     display: block;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 footer {
     background: black;
     text-align: center;
@@ -115,6 +138,7 @@ footer {
     flex-shrink: 0;
 }
 
+/*a= 0 b= 0 c=2 <=> Especificidad 2*/
 footer>address {
     color: white;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -127,6 +151,8 @@ footer>address {
 
 
 @media screen and (max-width : 1050px) {
+
+    /*a= 0 b= 0 c= 1 <=> Especificidad 1*/
     header {
         background-image: none;
         position: fixed;
@@ -135,6 +161,7 @@ footer>address {
         height: 0;
     }
 
+    /*a= 1 b= 0 c= 0 <=> Especificidad 100*/
     #poster2 {
         display: block;
         margin-left: auto;
@@ -142,28 +169,35 @@ footer>address {
         width: 8%;
     }
 
+    /*a= 0 b= 0 c= 1 <=> Especificidad 1*/
     h1 {
         display: none;
     }
 
+    /*a= 0 b= 0 c= 1 <=> Especificidad 1*/
     nav {
         background-color: black;
     }
 
+    /*a= 0 b= 0 c=2 <=> Especificidad 2*/
     nav ul {
         position: static;
         display: none;
     }
 
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
     nav ul li,
     nav li a {
         width: 100%;
     }
 
+    /*a= 0 b= 0 c=2 <=> Especificidad 2*/
     header + section {
         margin-top: 6.875em;
     }
 
+    /*a= 0 b= 1 c= 0 <=> Especificidad 10*/
     .mostrar-menu {
         display: block;
     }

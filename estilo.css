@@ -1,13 +1,17 @@
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 html,
 body {
     height: 100%;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 body {
     background-color: white;
     text-align: justify; 
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 h2 {
 
     text-align: center;
@@ -15,6 +19,7 @@ h2 {
     font-size: 3.125em;
 }
 
+/*a= 0 b= 0 c= 2 <=> Especificidad 2*/
 h2 + ul {
     list-style-type: none;
     display: flex;
@@ -23,6 +28,7 @@ h2 + ul {
 
 }
 
+/*a= 0 b= 0 c= 3 <=> Especificidad 3*/
 h2 + ul > li {
     border: 0.375em solid black;
     box-shadow: 0.125em 0.125em 0.3125em rgb(32, 31, 31);
@@ -30,6 +36,7 @@ h2 + ul > li {
     margin: 1.375em;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 table {
     border-radius: 0.3125em;
     font-weight: normal;
@@ -42,6 +49,8 @@ table {
     margin-bottom: 1.25em;
 }
 
+/*a= 0 b= 0 c= 2 <=> Especificidad 2*/
+/*a= 0 b= 0 c= 2 <=> Especificidad 2*/
 table td,
 table th {
     text-align: center;
@@ -51,15 +60,18 @@ table th {
     font-size: 0.75em;
 }
 
+/*a= 0 b= 0 c= 3 <=> Especificidad 3*/
 table thead th {
     color: white;
     background: black;
 }
 
+/*a= 0 b= 1 c= 3 <=> Especificidad 13*/
 table tr:nth-child(even) {
     background: #F8F8F8;
 }
 
+/*a= 0 b= 0 c= 1 <=> Especificidad 1*/
 video {
     float:right;
     max-width: 100%;
@@ -69,11 +81,14 @@ video {
 }
 
 @media screen and (max-width : 1050px) {
+
+    /*a= 0 b= 0 c= 1 <=> Especificidad 1*/
     table {
         display: block;
         width: 100%;
     }
 
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
     table-wrapper:before {
         content: "";
         display: block;
@@ -83,21 +98,28 @@ video {
         padding: 0 0 0.625em;
     }
 
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
     table thead,
     table tbody,
     table thead th {
         display: block;
     }
 
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
     table thead {
         float: left;
     }
 
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
     table tbody {
         width: auto;
         overflow-x: auto;
     }
 
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
+    /*a= 0 b= 0 c= 2 <=> Especificidad 2*/
     table td,
     table th {
         padding: 1.25em .625em .625em .625em;
@@ -111,25 +133,30 @@ video {
         text-overflow: ellipsis;
     }
 
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
     table thead th {
         text-align: left;
         border-bottom: 0.0625em solid #f7f7f9;
         width: 7.5em;
     }
 
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
     table tbody tr {
         display: table-cell;
     }
 
+    /*a= 0 b= 1 c= 3 <=> Especificidad 13*/
     table tr:nth-child(even) {
         background: transparent;
     }
 
+    /*a= 0 b= 1 c= 4 <=> Especificidad 14*/
     table tr td:nth-child(odd) {
         background: #F8F8F8;
         border-right: 0.0625em solid #E6E4E4;
     }
 
+    /*a= 0 b= 0 c= 3 <=> Especificidad 3*/
     table tbody td {
         display: block;
         text-align: center;
